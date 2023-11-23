@@ -4,8 +4,6 @@ WORKDIR /app
 
 COPY ./docker-react/react/package*.json ./
 
-RUN npm install
-
-COPY ./docker-react/react/ ./
+RUN npm ci
 
 CMD ["npm","run","dev"]
